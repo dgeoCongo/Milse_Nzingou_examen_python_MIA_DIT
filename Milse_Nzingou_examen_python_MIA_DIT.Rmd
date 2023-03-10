@@ -1,0 +1,39 @@
+---
+title: "Python exam"
+author: "Milse Willam NZINGOU MOUHEMBE"
+date: "2023-03-09"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(reticulate)
+use_python("C:/Users/User/AppData/Local/Programs/Python/Python310/python.exe")
+```
+
+
+## Markdown
+
+This is an Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. 
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+
+
+## Including Plots
+
+You can also embed plots, for example:
+
+
+We start with python
+
+```{python libraries}
+import pandas as pd
+import matplotlib.pyplot as plt
+import duckdb
+import pyarrow
+duckdb.sql('SELECT * FROM "./titanic.csv"').df()
+
+```
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
